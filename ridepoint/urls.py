@@ -17,8 +17,9 @@ Including another URLconf
 #test commit code changes, test
 
 from django.contrib import admin
-from django.urls import path
-
+from django.urls import path, include
+from feed import urls
 urlpatterns = [
+    path('', include('feed.urls')),
     path('admin/', admin.site.urls),
 ]
