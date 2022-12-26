@@ -19,7 +19,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from feed import urls
+from riders import views as rider_views
+
+
 urlpatterns = [
-    path('', include('feed.urls')),
+    path('feed', include('feed.urls')),
+    path('riders', include('riders.urls')),
     path('admin/', admin.site.urls),
 ]
