@@ -74,6 +74,7 @@ WSGI_APPLICATION = 'ridepoint.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
+# This is the old DB config. Save this for future reference in case something went wrong.
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.sqlite3',

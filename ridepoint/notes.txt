@@ -1,0 +1,5 @@
+SUPERUSER
+
+username: rp_superuser
+email: francis.smcimsi@gmail.com
+password: strike
