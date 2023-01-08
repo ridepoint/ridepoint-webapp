@@ -19,11 +19,20 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from feed import urls
+from feed import views as feed_views
 from riders import views as rider_views
+from django.contrib.auth import views as authentication_views
+from django.conf.urls.static import static
+from django.conf import settings
 
 
 urlpatterns = [
     path('feed', include('feed.urls')),
     path('riders', include('riders.urls')),
     path('admin/', admin.site.urls),
+    path('register/', rider_views.register, name='register'),
+    path('login/', authentication_views.LoginView.as_view(template_name='riders/login.html'), name='login'),
+    path('logout/', authentication_views.LogoutView.as_view(template_name='riders/logout.html'), name='logout'),
+
+
 ]

@@ -3,4 +3,4 @@ from django.http import HttpResponse
 # Create your views here.
 
 def feed(request):
-    return HttpResponse("This the feed page.")
+    return render(request, 'feed/feed.html')
