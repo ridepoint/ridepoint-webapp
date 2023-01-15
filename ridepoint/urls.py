@@ -33,6 +33,7 @@ urlpatterns = [
     path('register/', rider_views.register, name='register'),
     path('login/', authentication_views.LoginView.as_view(template_name='riders/login.html'), name='login'),
     path('logout/', authentication_views.LogoutView.as_view(template_name='riders/logout.html'), name='logout'),
+    path('profile/', rider_views.profilepage ,name='profile'),
 
 
 ]

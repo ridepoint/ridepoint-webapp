@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -133,6 +134,10 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
+#This is to configure where profile images are save
+MEDIA_ROOT= os.path.join(BASE_DIR, 'pictures')
+#Define the URL where Media of app lies
+MEDIA_URL= '/pictures/'
 
 #Setting the redirection after a user has logged in.
 LOGIN_REDIRECT_URL = 'feed'
