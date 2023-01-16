@@ -26,6 +26,7 @@ from django.conf.urls.static import static
 from django.conf import settings
 
 
+
 urlpatterns = [
     path('feed', include('feed.urls')),
     path('riders', include('riders.urls')),
@@ -35,5 +36,11 @@ urlpatterns = [
     path('logout/', authentication_views.LogoutView.as_view(template_name='riders/logout.html'), name='logout'),
     path('profile/', rider_views.profilepage ,name='profile'),
 
-
 ]
+
+
+
+
+urlpatterns += [
+    # ... the rest of your URLconf goes here ...
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
